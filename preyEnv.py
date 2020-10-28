@@ -16,8 +16,8 @@ class PreyEnv(gym.Env):
                                             np.array([prey_settings[0], map_size[0], map_size[1]]))
 
     def reset(self):
-        self.world = World(self.world_settings[0], self.world_settings[1], self.world_settings[3],
-                           self.world_settings[4], self.world_settings[5], self.world_settings[6])
+        self.world = World(self.world_settings[0], self.world_settings[1], self.world_settings[2],
+                           self.world_settings[3], self.world_settings[4], self.world_settings[5])
 
     def step(self, actions):
         self.world.step(actions=actions, env_type="prey")
